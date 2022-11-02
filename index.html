@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Ceja del Tambo</title>
+    <style>
+      
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+      }
+
+      body {
+        background-color: #f96666d8;
+      }
+
+      main {
+        position:relative;
+        margin: 100px  auto;
+        width: 80%;
+        height: 70vh;
+        padding: 10px;
+        background-image: url("images/waterfall.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 1;
+        border-radius: 35px;
+        border: 1px solid rgba(63, 61, 61, 0.842);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+
+      h1{
+        position:absolute;
+        top: calc(20% - 160px);
+        right: calc(50% - 150px);
+        padding: 25px;
+        background-color: rgba(63, 61, 61, 0.842);
+        font-size: 4rem;
+        color:whitesmoke;
+        opacity: 1;
+        text-align: center;
+        border-radius: 30%;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      }
+
+      .carrousel-container{
+        margin: 0 auto;
+        width: 100%;
+        position: relative;
+        height: 700px;
+      }
+
+      .button{
+        font-size: 30px;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.7);
+        text-align: center;
+        font-weight: bold;
+        position: absolute;
+        color: #fff;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .buttons:hover{
+        cursor:pointer;
+        transform: scale(1.2,1.2);
+      }
+
+      img{
+        position: absolute;
+        top:0;
+        right: calc(50% - 50px);
+        width:50%;
+        height: 400px;
+      }
+
+      .backward{
+        left: 2%;
+        top: calc(50% - 70px);
+      }
+
+      .forward{
+        right: 2%;
+        top: calc(50% - 70px);
+      }
+
+    </style>
+  </head>
+  <body>
+    <main>
+        <h1>
+            LA CEJA
+            <br>
+            DEL  TAMBO
+        </h1>
+    </main>
+      <div class="carrousel-container">
+            <div class="button backward">
+                &#60
+            </div>
+            <div class="button forward">
+                &#62
+            </div>
+            <img src="./images/parque-principal-la-ceja-antioquia.png" alt="La Ceja square">
+        </div>
+    <script>
+      const backwardBttn= document.querySelector(".backward")
+      const forwardBttn= document.querySelector(".forward")
+      const img= document.querySelector("img")
+      let images =["./images/basilica-la-ceja-antioquia.png", "./images/cerro-el-capiro-la-ceja-antioquia.png","./images/cerro-el-corcobado-la-ceja-antioquia_1.png","./images/el-salto-del-buey-la-ceja-antioquia.png","./images/parque-principal-la-ceja-antioquia.png","./images/rio-buey-abejorral-antioquia.png","./images/rio-piedras-la-ceja-antioquia.png"]
+
+      let count= 0
+
+      backwardBttn.addEventListener("click", moveCarrouselback)
+      forwardBttn.addEventListener("click", moveCarrouselfront)
+
+      function moveCarrouselback(){
+        if(count >0){
+          img.src=  images[count -1]
+          count--
+        }else{
+           img.src = images[images.length-1]
+           count = images.length -1
+        }
+      }
+
+      function moveCarrouselfront(){
+        if(count <images.length -1){
+          img.src=  images[count +1]
+          count++
+        }else{
+           img.src = images[0]
+           count = 0
+        }
+      }
+
+
+    </script>
+  </body>
+</html>
