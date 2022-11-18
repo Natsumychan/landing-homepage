@@ -19,6 +19,7 @@
       body {
         position: relative;
         background-color: #f96666d8;
+        overflow-x:hidden;
       }
 
       nav{
@@ -29,15 +30,17 @@
 
       h2{
         position: absolute;
-        top: 50px;
-        left: 50px;
+        top: 40px;
+        left: 40px;
         color:whitesmoke;
-        font-size: 2rem;
+        font-size: 1.4rem;
         font-family: 'Satisfy', cursive;
         z-index: 1;
       }
 
       .img-logo{
+        width: 100px;
+        height: 100px;
         position: absolute;
         top: 5px;
         left: 8px;
@@ -63,8 +66,8 @@
       main {
         position:relative;
         margin: 100px  auto;
-        width: 70%;
-        height: 500px;
+        width: 50%;
+        height: 400px;
         padding: 10px;
         background-color: #fff;
         border-radius: 35px;
@@ -111,7 +114,7 @@
       .main-image{
         margin:0 auto;
         width:100%;
-        height: 500px;
+        height: 400px;
         border-radius: 35px;
       }
 
@@ -127,15 +130,24 @@
 
       .shadow-flowers{
         position:absolute;
-        width: 100%;
+        margin: 0 auto;
+        width:50%;
         height: 300px;
-        bottom: calc(10% - 22px);
+        bottom: calc(10% - 24px);
+      }
+
+      .flower-1{
+        left: 0;
+      }
+
+      .flower-2{
+        right: 0;
       }
 
       footer{
         width: 100%;
         height: 20px;
-        padding: 20px;
+        padding: 13px;
         background-color: rgba(63, 61, 61, 1) ;
       }
 
@@ -179,7 +191,8 @@
           &#62
         </button>
     </main>
-    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/015/original/pngwing.com.png?1668528418" alt="Flowers silhouette" class="shadow-flowers">
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/015/original/pngwing.com.png?1668528418" alt="Flowers silhouette" class="shadow-flowers flower-1">
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/015/original/pngwing.com.png?1668528418" alt="Flowers silhouette" class="shadow-flowers flower-2">
     <footer>
       <ul>
         <li>twitter</li>
